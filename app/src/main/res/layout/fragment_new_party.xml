@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context="com.pt.hz.partytime.MainActivity$HomeFragment" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Add Friends/Groups"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:drawableLeft="@drawable/ic_action_cc_bcc_holo_light"/>
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/SpinnerFeedbackType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:prompt="@string/feedbacktype"
+        android:entries="@array/feedbacktypelist" />
+    <!--<DatePicker-->
+        <!--android:id="@+id/dpResult"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    <EditText
+        android:id="@+id/EditTextFeedbackBody"
+        android:layout_height="wrap_content"
+        android:hint="@string/feedbackbody"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:layout_width="fill_parent"/>
+    <Button
+        android:id="@+id/ButtonSendFeedback"
+        android:layout_height="wrap_content"
+        android:text="@string/feedbackbutton"
+        android:onClick="sendFeedback"
+        android:layout_width="fill_parent"/>
+</LinearLayout>
